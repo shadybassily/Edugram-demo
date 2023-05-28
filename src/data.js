@@ -21,7 +21,6 @@ const learningProcess = [
    { src: getCertificate, alt: 'Get Certificate', ariaLabel: 'Get Certificate' },
 ];
 
-
 const courses = [
    {
       id: 1,
@@ -149,11 +148,21 @@ const popularCourses = [
 ];
 
 const certificates = [
-   'Master Track Certificates',
-   'IT Certificates',
-   'University Certificates',
-   'Master Certificates',
-   'More',
+   {
+      name: 'Master Track Certificates',
+   },
+   {
+      name: 'IT Certificates',
+   },
+   {
+      name: 'University Certificates',
+   },
+   {
+      name: 'Master Certificates',
+   },
+   {
+      name: 'More',
+   },
 ];
 
 const certificatesCards = [

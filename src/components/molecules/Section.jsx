@@ -2,29 +2,26 @@ import { useState } from 'react';
 import { Box } from '@mui/material';
 
 import { AppButton } from '../atoms';
-import { AppSlider } from '../molecules';
-import SliderText from '../molecules/SliderText';
+import { AppSlider } from '.';
+import SliderText from '../atoms/SliderText';
 import WrappingContainer from './WrappingContainer';
-import { MediaCard } from '../organisms';
+import MediaCard from './MediaCard';
 
 export default function Section({
    sectionHeader,
    sectionContent,
    sectionActions,
-
    data,
    type, //text or card
    slidesToShow = { sm: 1, md: 2, lg: 3, xl: 4 },
    handleSliderItemClick,
-
    sx,
 }) {
    const initialState = data ? data[0] : null;
    const [selected, setSelected] = useState(initialState);
 
-   let sliderData;
-   if (data) {
-      sliderData =
+   const sliderItems = () => {
+      let items =
          type == 'text'
             ? data.map((item) => (
                  <SliderText
@@ -41,14 +38,15 @@ export default function Section({
                  <Box key={card.id} sx={{ height: '500px' }}>
                     <MediaCard
                        item={card}
-                       sx={{ margin: '0 auto', height: '100%'}}
+                       sx={{ margin: '0 auto', height: '100%' }}
                        onClick={() => {
                           handleSliderItemClick(card);
                        }}
                     />
                  </Box>
               ));
-   }
+      return items;
+   };
 
    return (
       <Box
@@ -61,7 +59,7 @@ export default function Section({
       >
          {sectionHeader}
          <WrappingContainer sx={{ gap: 5 }}>
-            {data && <AppSlider items={sliderData} slidesToShow={slidesToShow} />}
+            {data && <AppSlider items={sliderItems()} slidesToShow={slidesToShow} />}
             {sectionContent && sectionContent}
 
             {sectionActions && (

@@ -2,9 +2,8 @@ import { Grid, Typography, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 
-import benefitsImage from '../../assets/images/bemefits.png';
-import WrappingContainer from './WrappingContainer';
-import Section from './Section';
+import benefitsImage from '../../../assets/images/benefits.png';
+import Section from '../../molecules/Section';
 
 const benefits = [
    'Access 16,000+ expert-led courses.',
@@ -14,7 +13,7 @@ const benefits = [
    'Earn a certificate when you complete a course.',
 ];
 
-export default function Benefits() {
+export default function LearningBenefits() {
    const theme = useTheme();
    const { primary, secondary } = theme.palette;
    const sectionContent = (

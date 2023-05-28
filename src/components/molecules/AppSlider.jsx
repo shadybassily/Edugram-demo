@@ -49,7 +49,7 @@ export default function AppSlider({ items, width = '100%', slidesToShow }) {
    };
 
    return (
-      <Box sx={{ width}}>
+      <Box sx={{ width }}>
          <Slider {...settings}>{items}</Slider>
       </Box>
    );

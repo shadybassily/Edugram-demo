@@ -1,9 +1,9 @@
 import { Grid } from '@mui/material';
 
-import Section from './Section';
-import { SectionHeader } from '../atoms';
-import { CertificateCard } from '../organisms';
-import { certificates, certificatesCards } from '../../data';
+import Section from '../../molecules/Section';
+import { SectionHeader } from '../../atoms';
+import { certificates, certificatesCards } from '../../../data';
+import CertificateCard from '../../molecules/CertificateCard';
 
 export default function PopularCertificates() {
    const handleItemClick = (item) => {

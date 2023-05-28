@@ -4,18 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { useTheme } from '@mui/material/styles';
 
 import { MediaCardButton, Price, Rate, BookMark } from '../atoms/card';
 
-// image={course.image}
-//                title={course.title}
-//                rating={course.rating}
-//                numOfRatings={course.numOfRatings}
-//                description={course.description}
-//                tutors={course.tutors}
-//                newPrice={course.newPrice}
-//                oldPrice={course.oldPrice}
 
 export default function MediaCard({ item, onClick, sx }) {
    const {
@@ -27,18 +18,10 @@ export default function MediaCard({ item, onClick, sx }) {
       tutors,
       newPrice,
       oldPrice,
-
    } = item;
-   const theme = useTheme();
 
    const cardStyle = {
-      width: '320px',
-      [theme.breakpoints.up('md')]: {
-         width: '280px',
-      },
-      [theme.breakpoints.up('xl')]: {
-         width: '320px',
-      },
+      width: {sm:'320px', md:'280px', xl:'320px'},
       boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)',
       borderRadius: '20px',
       textAlign: 'start',

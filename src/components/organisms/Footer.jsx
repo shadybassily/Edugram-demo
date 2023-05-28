@@ -1,8 +1,7 @@
-import { Container, Grid, Typography, IconButton, Link, Box } from '@mui/material';
-import WrappingContainer from './WrappingContainer';
+import { Grid, Typography, IconButton, Link, Box } from '@mui/material';
+import WrappingContainer from '../molecules/WrappingContainer';
 
 import logo from '../../assets/icons/logo.png';
-import {AppLogo} from "../atoms"
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -96,7 +95,7 @@ export default function Footer() {
                   md={4}
                   sm={8}
                   xs={12}
-                  sx={{ display: 'flex', flexDirection: 'column',  gap: 5 }}
+                  sx={{ display: 'flex', flexDirection: 'column', gap: 5 }}
                >
                   <img src={logo} width="85%" />
                   <Typography variant="body1">
@@ -119,7 +118,7 @@ export default function Footer() {
                      xs={12}
                      md={3}
                      lg={2}
-                     sx={{ display: 'flex', flexDirection: 'column',  gap: 1 }}
+                     sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}
                   >
                      <Typography color="primary" variant="h4">
                         {section.title}
@@ -136,7 +135,7 @@ export default function Footer() {
             </Grid>
          </WrappingContainer>
 
-         <Box sx={{ backgroundColor: '#F3F3F3', py:5, textAlign:'center' }}>
+         <Box sx={{ backgroundColor: '#F3F3F3', py: 5, textAlign: 'center' }}>
             <Typography color="grey">Designed and developed at inova LLC</Typography>
          </Box>
       </Box>

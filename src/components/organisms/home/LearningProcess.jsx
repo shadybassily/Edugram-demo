@@ -1,10 +1,9 @@
 import { Grid } from '@mui/material';
 
-import { AppBadge, SectionHeader } from '../atoms';
-import whatsappIcon from '../../assets/icons/whatsapp.svg';
-import { learningProcess } from '../../data';
-import Section from './Section';
-
+import { AppBadge, SectionHeader } from '../../atoms';
+import whatsappIcon from '../../../assets/icons/whatsapp.svg';
+import { learningProcess } from '../../../data';
+import Section from '../../molecules/Section';
 
 export default function LearningProcess() {
    const sectionContent = (

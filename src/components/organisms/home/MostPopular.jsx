@@ -1,6 +1,6 @@
-import { popularCourses } from '../../data';
-import { SectionHeader } from '../atoms';
-import Section from './Section';
+import { popularCourses } from '../../../data';
+import { SectionHeader } from '../../atoms';
+import Section from '../../molecules/Section';
 
 export default function MostPopular() {
    const handleItemClick = (card) => {

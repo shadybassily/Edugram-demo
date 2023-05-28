@@ -1,12 +1,9 @@
-import { AppBar, Box } from '@mui/material';
+import { AppBar } from '@mui/material';
 
 import { AppLogo } from '../atoms';
-import { Searchbar, NavMenu } from '../molecules';
-import { useTheme } from '@mui/material/styles';
-import WrappingContainer from '../template/WrappingContainer';
+import { Searchbar, NavMenu, WrappingContainer } from '../molecules';
 
 export default function Navbar() {
-   const theme = useTheme();
 
    const AppBarStyle = {
       backgroundColor: '#fff',
@@ -17,14 +14,11 @@ export default function Navbar() {
 
    const containerStyle = {
       display: 'flex',
-      flexDirection: 'row',
       justifyContent: 'space-between',
       flexWrap: 'wrap',
       gap: 2,
-      [theme.breakpoints.down('sm')]: {
-         flexDirection: 'column',
-         alignItems: 'center',
-      },
+      flexDirection:{xs:'column', sm:'row'},
+      alignItems:{xs:'center'},
    };
 
    return (

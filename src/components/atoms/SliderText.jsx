@@ -1,16 +1,11 @@
-// prepare slider items
-// slider items can be either text, or media card
 import { Box, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 
 export default function SliderText({ item, selected, setSelected, onClick }) {
+
    const handleSelection = (item) => {
       setSelected(item);
       onClick();
    };
-
-   const theme = useTheme();
-   const { primary } = theme.palette;
 
    const itemStyle = (item) => {
       const style = {
@@ -24,13 +19,13 @@ export default function SliderText({ item, selected, setSelected, onClick }) {
       };
       if (item === selected) {
          style.backgroundColor = 'white';
-         style.color = primary.main;
+         style.color = 'primary.main';
       }
       return style;
    };
 
    return (
-      <Box>
+      <Box >
          <Typography
             variant="h6"
             sx={itemStyle(item)}
@@ -38,7 +33,7 @@ export default function SliderText({ item, selected, setSelected, onClick }) {
                handleSelection(item);
             }}
          >
-            {item}
+            {item.name}
          </Typography>
       </Box>
    );
