@@ -7,21 +7,18 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import { MediaCardButton, Price, Rate, BookMark } from '../atoms/card';
 
-
 export default function MediaCard({ item, onClick, sx }) {
    const {
-      image,
-      title,
-      rating,
-      numOfRatings,
-      description,
-      tutors,
-      newPrice,
-      oldPrice,
+      classified_product: { title, description, instructors, image_url },
+      original_price,
+      price_after_discount,
+      original_price_currency,
+      final_rating_from_reviews,
+      reviews_number,
    } = item;
 
    const cardStyle = {
-      width: {sm:'320px', md:'280px', xl:'320px'},
+      width: { xs: '320px', md: '280px', xl: '320px' },
       boxShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)',
       borderRadius: '20px',
       textAlign: 'start',
@@ -33,17 +30,18 @@ export default function MediaCard({ item, onClick, sx }) {
 
    return (
       <Card sx={cardStyle} onClick={onClick}>
-         <BookMark sx={{ position: 'absolute', right: '15px', top: '15px' }} item={item}/>
-         <CardMedia sx={{ height: ' 200px' }} image={image} title={title} />
+         <BookMark sx={{ position: 'absolute', right: '15px', top: '15px' }} item={item} />
+         <CardMedia sx={{ height: ' 200px' }} image={image_url} title={title} />
 
          <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             <Typography gutterBottom component="div" sx={{ fontSize: '16px' }}>
                {title}
             </Typography>
 
-            <Rate rating={rating} numOfRatings={numOfRatings} />
+            <Rate rating={final_rating_from_reviews} numOfRatings={reviews_number} />
+            
             <Typography variant="body2" color="text.secondary" noWrap>
-               {tutors}
+               {instructors.map((instructor) => instructor.name).join('')}
             </Typography>
 
             <Typography
@@ -61,7 +59,11 @@ export default function MediaCard({ item, onClick, sx }) {
                {description}
             </Typography>
 
-            <Price newPrice={newPrice} oldPrice={oldPrice} />
+            <Price
+               newPrice={price_after_discount}
+               oldPrice={original_price}
+               currency={original_price_currency}
+            />
          </CardContent>
 
          <CardActions sx={{ marginTop: 'auto', display: 'flex', gap: '10px', pb: 3 }}>

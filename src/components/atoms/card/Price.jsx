@@ -1,11 +1,11 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-export default function Price({ newPrice, oldPrice }) {
+export default function Price({ newPrice, oldPrice, currency }) {
    return (
       <Box>
          <Typography variant="body1" component="span" sx={{ marginRight: '10px' }}>
-            $ {newPrice}
+            {currency} {newPrice}
          </Typography>
          <Typography
             variant="body1"
@@ -13,7 +13,7 @@ export default function Price({ newPrice, oldPrice }) {
             color="text.secondary"
             sx={{ textDecoration: 'line-through' }}
          >
-            {oldPrice && `$ ${oldPrice}`}
+            {oldPrice && `${currency} ${oldPrice}`}
          </Typography>
       </Box>
    );

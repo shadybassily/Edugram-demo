@@ -1,11 +1,10 @@
 import { Grid } from '@mui/material';
 
 import Section from '../../molecules/Section';
-import { SectionHeader } from '../../atoms';
 import { certificates, certificatesCards } from '../../../data';
 import CertificateCard from '../../molecules/CertificateCard';
 
-export default function PopularCertificates() {
+export default function PopularCertificates({ selectedCertificate, setSelectedCertificate}) {
    const handleItemClick = (item) => {
       console.log('fetching data for', item);
    };
@@ -24,17 +23,15 @@ export default function PopularCertificates() {
 
    return (
       <Section
-         sectionHeader={
-            <SectionHeader
-               title="Popular Certificates"
-               subTitle="Break into a new field. No prior experience necessary to get started"
-            />
-         }
-         data={certificates} // array of strings to display in the slider
+         title="Popular Certificates"
+         subTitle="Break into a new field. No prior experience necessary to get started"
+         sliderData={{ type: 'text', data: certificates }} // array of strings to display in the slider
          type="text"
          handleSliderItemClick={handleItemClick}
          sectionContent={sectionContent}
          sectionActions={{ title: 'View More Certificates', action }}
+         selected={selectedCertificate}
+         setSelected={setSelectedCertificate}
          sx={{ backgroundColor: '#F3F3F3' }}
       />
    );

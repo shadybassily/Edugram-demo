@@ -32,16 +32,8 @@ const sectionContent = (
    </Grid>
 );
 
-const sectionHeader = (
-   <SectionHeader title="Our Clients">
-      <Typography variant="h5">
-         <Link underline="none" href="#" sx={{ position: 'absolute', right: '25px', top: '0' }}>
-            View All
-         </Link>
-      </Typography>
-   </SectionHeader>
-);
-
 export default function Clients() {
-   return <Section sectionHeader={sectionHeader} sectionContent={sectionContent} />;
+   return (
+      <Section title="Our Clients" sectionContent={sectionContent} />
+   );
 }

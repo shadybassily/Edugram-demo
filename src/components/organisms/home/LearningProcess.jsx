@@ -1,7 +1,6 @@
 import { Grid } from '@mui/material';
 
-import { AppBadge, SectionHeader } from '../../atoms';
-import whatsappIcon from '../../../assets/icons/whatsapp.svg';
+import { AppBadge } from '../../atoms';
 import { learningProcess } from '../../../data';
 import Section from '../../molecules/Section';
 
@@ -21,15 +20,13 @@ export default function LearningProcess() {
       </Grid>
    );
 
-   const sectionHeader = (
-      <SectionHeader
+   return (
+      <Section
          title="Learning Process"
          subTitle="Learn the latest skills to reach your professional goals"
          sx={{ backgroundColor: '#F3F3F3', pt: 10 }}
-      >
-         <img src={whatsappIcon} style={{ position: 'absolute', right: '25px', top: '20px' }} />
-      </SectionHeader>
+         sectionContent={sectionContent}
+         wrappingContainerWidth='100%'
+      />
    );
-
-   return <Section sectionHeader={sectionHeader} sectionContent={sectionContent} />;
 }

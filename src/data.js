@@ -21,129 +21,107 @@ const learningProcess = [
    { src: getCertificate, alt: 'Get Certificate', ariaLabel: 'Get Certificate' },
 ];
 
-const courses = [
-   {
-      id: 1,
-      image: courseImage1,
-      title: 'User Experience Design Essentials - Adobe XD UI UX Design',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
-   },
-   {
-      id: 2,
-      image: courseImage2,
-      title: 'Motion Graphic',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
-   },
-   {
-      id: 3,
-      image: courseImage3,
-      title: 'The Ultimate Drawing Course - Beginner to Advanced',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
-   },
-   {
-      id: 4,
-      image: courseImage4,
-      title: 'Introduction to Graphic Design',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
-   },
-];
-
 const popularCourses = [
    {
-      id: 1,
-      image: popular1,
-      title: 'Big Data, and Machine Learning on GCP by Google Cloud',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
+      product_id: 1,
+      classified_product: {
+         title: 'User Experience Design Essentials - Adobe XD UI UX Design',
+         description:
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
+         instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+
+         image_url: popular1,
+      },
+
+      final_ratings_from_reviews: 4.7,
+      reviews_numbers: 1.988,
+
+      price_after_discount: 17.99,
+      original_price: 40.99,
+   },
+
+   {
+      product_id: 2,
+      classified_product: {
+         title: 'Digital Marketing',
+         description:
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
+         instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+
+         image_url: popular2,
+      },
+
+      final_ratings_from_reviews: 4.7,
+      reviews_numbers: 1.988,
+
+      price_after_discount: 17.99,
+      original_price: 40.99,
    },
    {
-      id: 2,
-      image: popular2,
-      title: 'Digital Marketing',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
+      product_id: 3,
+      classified_product: {
+         title: 'HTML, CSS, and Javascript for Web Developers',
+         description:
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
+         instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+
+         image_url: popular3,
+      },
+      final_ratings_from_reviews: 4.7,
+      reviews_numbers: 1.988,
+
+      price_after_discount: 17.99,
+      original_price: 40.99,
    },
    {
-      id: 3,
-      image: popular3,
-      title: 'HTML, CSS, and Javascript for Web Developers',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
+      product_id: 4,
+      classified_product: {
+         title: 'User Experience Design Essentials - Adobe XD UI UX Design',
+         description:
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
+         instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+
+         image_url: popular1,
+      },
+
+      final_ratings_from_reviews: 4.7,
+      reviews_numbers: 1.988,
+
+      price_after_discount: 17.99,
+      original_price: 40.99,
+   },
+
+   {
+      product_id: 5,
+      classified_product: {
+         title: 'Digital Marketing',
+         description:
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
+         instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+         image_url: popular2,
+      },
+
+      final_ratings_from_reviews: 4.7,
+      reviews_numbers: 1.988,
+
+      price_after_discount: 17.99,
+      original_price: 40.99,
    },
    {
-      id: 4,
-      image: popular1,
-      title: 'Big Data, and Machine Learning on GCP by Google Cloud',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
-   },
-   {
-      id: 5,
-      image: popular2,
-      title: 'Digital Marketing',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
-   },
-   {
-      id: 6,
-      image: popular3,
-      title: 'HTML, CSS, and Javascript for Web Developers',
-      rating: 4.7,
-      numOfRatings: 1.988,
-      tutors: 'Melvin Owens, Roberts Andrei, Jose Portila',
-      description:
-         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
-      newPrice: 17.99,
-      oldPrice: 40.99,
+      product_id: 6,
+      classified_product: {
+         title: 'HTML, CSS, and Javascript for Web Developers',
+         description:
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
+         instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+
+         image_url: popular3,
+      },
+      final_ratings_from_reviews: 4.7,
+      reviews_numbers: 1.988,
+
+      price_after_discount: 17.99,
+      original_price: 40.99,
    },
 ];
 
@@ -188,4 +166,4 @@ const certificatesCards = [
    },
 ];
 
-export { learningProcess, courses, popularCourses, certificates, certificatesCards };
+export { learningProcess, popularCourses, certificates, certificatesCards };

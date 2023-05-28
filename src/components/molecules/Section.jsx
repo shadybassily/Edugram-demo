@@ -1,26 +1,28 @@
-import { useState } from 'react';
 import { Box } from '@mui/material';
 
-import { AppButton } from '../atoms';
+import { AppButton, SectionHeader } from '../atoms';
 import { AppSlider } from '.';
 import SliderText from '../atoms/SliderText';
 import WrappingContainer from './WrappingContainer';
 import MediaCard from './MediaCard';
 
 export default function Section({
-   sectionHeader,
-   sectionContent,
-   sectionActions,
-   data,
-   type, //text or card
+   title,
+   subTitle,
+   sliderData,
    slidesToShow = { sm: 1, md: 2, lg: 3, xl: 4 },
    handleSliderItemClick,
+   selected,
+   setSelected,
+   isSliderDataLoading = false,
+   sectionContent,
+   isSectionContentLoading,
+   sectionActions,
+   wrappingContainerWidth="90%",
    sx,
 }) {
-   const initialState = data ? data[0] : null;
-   const [selected, setSelected] = useState(initialState);
-
    const sliderItems = () => {
+      const { type, data } = sliderData;
       let items =
          type == 'text'
             ? data.map((item) => (
@@ -49,19 +51,17 @@ export default function Section({
    };
 
    return (
-      <Box
-         sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            py: 4,
-            ...sx,
-         }}
-      >
-         {sectionHeader}
-         <WrappingContainer sx={{ gap: 5 }}>
-            {data && <AppSlider items={sliderItems()} slidesToShow={slidesToShow} />}
-            {sectionContent && sectionContent}
-
+      <Box sx={{ display: 'flex', flexDirection: 'column', py: 4, ...sx }}>
+         {/* 1. header */}
+         <SectionHeader title={title} subTitle={subTitle} />
+         <WrappingContainer sx={{ gap: 5, width: wrappingContainerWidth }}>
+            {/* 2. slider */}
+            {isSliderDataLoading
+               ? 'Loading'
+               : sliderData && <AppSlider items={sliderItems()} slidesToShow={slidesToShow} />}
+            {/* 3. content */}
+            {isSectionContentLoading ? 'Loading' : sectionContent && sectionContent}
+            {/* actions */}
             {sectionActions && (
                <AppButton
                   variant="contained"

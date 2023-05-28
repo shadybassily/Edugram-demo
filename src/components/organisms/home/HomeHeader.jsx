@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 
 import hero from '../../../assets/images/hero.png';
 
-export default function HeroSection() {
+export default function HomeHeader() {
    const theme = useTheme();
    const { primary, secondary } = theme.palette;
 

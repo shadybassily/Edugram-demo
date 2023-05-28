@@ -1,4 +1,4 @@
-export { default as HeroSection } from './HeroSection';
+export { default as HomeHeader } from './HomeHeader';
 export { default as LearningProcess } from './LearningProcess';
 export { default as TopCategories } from './TopCategories';
 export { default as LearningBenefits } from './LearningBenefits';

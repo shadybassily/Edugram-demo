@@ -14,12 +14,12 @@ const client = new QueryClient({
    },
 });
 ReactDOM.createRoot(document.getElementById('root')).render(
-   <React.StrictMode>
+   // <React.StrictMode>
       <QueryClientProvider client={client}>
          <ThemeProvider theme={theme}>
             <CssBaseline />
             <App />
          </ThemeProvider>
       </QueryClientProvider>
-   </React.StrictMode>
+   // </React.StrictMode>
 );

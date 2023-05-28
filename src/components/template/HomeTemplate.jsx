@@ -1,5 +1,5 @@
 import {
-   HeroSection,
+   HomeHeader,
    LearningProcess,
    TopCategories,
    LearningBenefits,
@@ -8,16 +8,37 @@ import {
    PopularCertificates,
 } from '../organisms/home';
 
-export default function HomeTemplate() {
+export default function HomeTemplate({
+   categories,
+   selectedCategory,
+   setSelectedCategory,
+   isFetchingCategories,
+   fetchCategoryCourses,
+   categoryCourses,
+   isCategoryCoursesLoading,
+   selectedCertificate,
+   setSelectedCertificate,
+}) {
    return (
       <>
-         <HeroSection />
+         <HomeHeader />
          <LearningProcess />
-         <TopCategories />
+         <TopCategories
+            categories={categories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            isFetchingCategories={isFetchingCategories}
+            fetchCategoryCourses={fetchCategoryCourses}
+            categoryCourses={categoryCourses}
+            isCategoryCoursesLoading={isCategoryCoursesLoading}
+         />
          <LearningBenefits />
          <MostPopular />
          <Clients />
-         <PopularCertificates />
+         <PopularCertificates
+            selectedCertificate={selectedCertificate}
+            setSelectedCertificate={setSelectedCertificate}
+         />
       </>
    );
 }
