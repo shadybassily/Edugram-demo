@@ -5,6 +5,7 @@ import {
 } from '../services/store/api/categoryApi';
 import { certificates } from '../data';
 import HomeTemplate from '../template/HomeTemplate';
+import WhatsappIcon from '../components/atoms/WhatsappIcon';
 
 export default function HomePage() {
    const [selectedCategory, setSelectedCategory] = useState(null);
@@ -23,15 +24,18 @@ export default function HomePage() {
    }, [selectedCategory]);
 
    return (
-      <HomeTemplate
-         categories={categories}
-         isFetchingCategories={isFetchingCategories}
-         selectedCategory={selectedCategory}
-         setSelectedCategory={setSelectedCategory}
-         categoryCourses={categoryCourses}
-         isCategoryCoursesLoading={isCategoryCoursesLoading}
-         selectedCertificate={selectedCertificate}
-         setSelectedCertificate={setSelectedCertificate}
-      />
+      <>
+         <HomeTemplate
+            categories={categories}
+            isFetchingCategories={isFetchingCategories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            categoryCourses={categoryCourses}
+            isCategoryCoursesLoading={isCategoryCoursesLoading}
+            selectedCertificate={selectedCertificate}
+            setSelectedCertificate={setSelectedCertificate}
+         />
+         <WhatsappIcon />
+      </>
    );
 }
