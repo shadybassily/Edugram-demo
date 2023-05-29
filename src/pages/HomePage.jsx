@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import { useFetchCategoriesQuery, useLazyFetchCoursesQuery } from '../../store/api/categoryApi';
-import { certificates } from '../../data';
+import {
+   useFetchCategoriesQuery,
+   useLazyFetchCoursesQuery,
+} from '../services/store/api/categoryApi';
+import { certificates } from '../data';
 import HomeTemplate from '../template/HomeTemplate';
 
 export default function HomePage() {
-   const [selectedCertificate, setSelectedCertificate] = useState(certificates[0]);
-   console.log(selectedCertificate);
-   const { data: categories, isFetching: isFetchingCategories } = useFetchCategoriesQuery();
    const [selectedCategory, setSelectedCategory] = useState(null);
+   const [selectedCertificate, setSelectedCertificate] = useState(certificates[0]);
 
+   const { data: categories, isFetching: isFetchingCategories } = useFetchCategoriesQuery();
    const [fetchCategoryCourses, { data: categoryCourses, isFetching: isCategoryCoursesLoading }] =
       useLazyFetchCoursesQuery();
 

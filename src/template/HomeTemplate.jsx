@@ -6,14 +6,13 @@ import {
    MostPopular,
    Clients,
    PopularCertificates,
-} from '../organisms/home';
+} from '../components/organisms/home';
 
 export default function HomeTemplate({
    categories,
    selectedCategory,
    setSelectedCategory,
    isFetchingCategories,
-   fetchCategoryCourses,
    categoryCourses,
    isCategoryCoursesLoading,
    selectedCertificate,
@@ -28,7 +27,6 @@ export default function HomeTemplate({
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
             isFetchingCategories={isFetchingCategories}
-            fetchCategoryCourses={fetchCategoryCourses}
             categoryCourses={categoryCourses}
             isCategoryCoursesLoading={isCategoryCoursesLoading}
          />
