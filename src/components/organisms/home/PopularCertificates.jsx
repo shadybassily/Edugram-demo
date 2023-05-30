@@ -26,7 +26,6 @@ export default function PopularCertificates({ selectedCertificate, setSelectedCe
          title="Popular Certificates"
          subTitle="Break into a new field. No prior experience necessary to get started"
          sliderData={{ type: 'text', data: certificates }} // array of strings to display in the slider
-         type="text"
          handleSliderItemClick={handleItemClick}
          sectionContent={sectionContent}
          sectionActions={{ title: 'View More Certificates', action }}

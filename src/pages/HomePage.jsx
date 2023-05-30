@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
-import {
-   useFetchCategoriesQuery,
-   useLazyFetchCoursesQuery,
-} from '../services/store/api/categoryApi';
+import { useFetchCategoriesQuery, useLazyFetchCoursesQuery } from '../services/store/api/categoryApi';
 import { certificates } from '../data';
 import HomeTemplate from '../template/HomeTemplate';
 import WhatsappIcon from '../components/atoms/WhatsappIcon';
+import { popularCourses } from '../data';
+
 
 export default function HomePage() {
    const [selectedCategory, setSelectedCategory] = useState(null);
@@ -34,6 +33,7 @@ export default function HomePage() {
             isCategoryCoursesLoading={isCategoryCoursesLoading}
             selectedCertificate={selectedCertificate}
             setSelectedCertificate={setSelectedCertificate}
+            popularCourses={popularCourses}
          />
          <WhatsappIcon />
       </>

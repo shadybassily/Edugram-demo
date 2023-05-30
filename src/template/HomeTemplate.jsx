@@ -15,6 +15,7 @@ export default function HomeTemplate({
    isFetchingCategories,
    categoryCourses,
    isCategoryCoursesLoading,
+   popularCourses,
    selectedCertificate,
    setSelectedCertificate,
 }) {
@@ -31,7 +32,7 @@ export default function HomeTemplate({
             isCategoryCoursesLoading={isCategoryCoursesLoading}
          />
          <LearningBenefits />
-         <MostPopular />
+         <MostPopular popularCourses={popularCourses} />
          <Clients />
          <PopularCertificates
             selectedCertificate={selectedCertificate}

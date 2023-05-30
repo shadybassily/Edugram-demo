@@ -37,7 +37,7 @@ export default function Section({
                  />
               ))
             : data.map((card) => (
-                 <Box key={card.id} sx={{ height: '500px' }}>
+                 <Box key={card.product_id} sx={{ height: '500px' }}>
                     <MediaCard
                        item={card}
                        sx={{ margin: '0 auto', height: '100%' }}
