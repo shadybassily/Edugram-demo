@@ -1,11 +1,10 @@
 import { createTheme } from '@mui/material';
-import Quicksand from './assets/fonts/Quicksand-VariableFont_wght.ttf';
+import Quicksand from '../assets/fonts/Quicksand-VariableFont_wght.ttf';
 
 // Create a theme instance.
 const theme = createTheme({
    typography: {
-      fontFamily: 'QuickSand',
-      lineHeight: 1.5,
+      fontFamily: ['QuickSand', 'Inter', 'sans-serif'].join(','),
       letterSpacing: 0.32,
       useNextVariants: true,
       suppressDeprecationWarnings: true,
@@ -21,7 +20,6 @@ const theme = createTheme({
             fontWeight: 700,
          },
       },
-     
    },
    components: {
       MuiCssBaseline: {
