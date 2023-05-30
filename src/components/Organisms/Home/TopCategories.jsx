@@ -1,4 +1,4 @@
-import { Section, MediaCard } from '../../molecules';
+import { Section, MediaCard } from '../../Molecules';
 import { Grid } from '@mui/material';
 
 const handleItemClick = (item) => {
@@ -36,14 +36,12 @@ export default function TopCategories({
       <Section
          title="Top Categories"
          subTitle="Learn the latest skills to reach your professional goals"
-
          sliderData={{ type: 'text', data: categories }}
-         slidesToShow = {{ sm: 1, md: 2, lg: 3, xl: 5 }}
+         slidesToShow={{ sm: 1, md: 2, lg: 3, xl: 5 }}
          handleSliderItemClick={handleItemClick}
          selected={selectedCategory}
          setSelected={setSelectedCategory}
          isSliderDataLoading={isFetchingCategories}
-
          sectionContent={<SectionContent />}
          isSectionContentLoading={isCategoryCoursesLoading}
          sectionActions={{ title: 'View More Courses', action }}

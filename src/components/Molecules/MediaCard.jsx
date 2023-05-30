@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { MediaCardButton, Price, Rate, BookMark } from '../atoms/card';
+import { MediaCardButton, Price, Rate, BookMark } from '../Atoms/card';
 
 export default function MediaCard({ item, onClick, sx }) {
    const {
@@ -39,7 +39,7 @@ export default function MediaCard({ item, onClick, sx }) {
             </Typography>
 
             <Rate rating={final_rating_from_reviews} numOfRatings={reviews_number} />
-            
+
             <Typography variant="body2" color="text.secondary" noWrap>
                {instructors.map((instructor) => instructor.name).join('')}
             </Typography>

@@ -1,10 +1,10 @@
 import { Grid } from '@mui/material';
 
-import Section from '../../molecules/Section';
+import Section from '../../Molecules/Section';
 import { certificates, certificatesCards } from '../../../data';
-import CertificateCard from '../../molecules/CertificateCard';
+import CertificateCard from '../../Molecules/CertificateCard';
 
-export default function PopularCertificates({ selectedCertificate, setSelectedCertificate}) {
+export default function PopularCertificates({ selectedCertificate, setSelectedCertificate }) {
    const handleItemClick = (item) => {
       console.log('fetching data for', item);
    };

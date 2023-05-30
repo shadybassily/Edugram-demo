@@ -1,8 +1,8 @@
 import { Box } from '@mui/material';
 
-import { AppButton, SectionHeader } from '../atoms';
+import { AppButton, SectionHeader } from '../Atoms';
 import { AppSlider } from '.';
-import SliderText from '../atoms/SliderText';
+import SliderText from '../Atoms/SliderText';
 import WrappingContainer from './WrappingContainer';
 import MediaCard from './MediaCard';
 
@@ -18,7 +18,7 @@ export default function Section({
    sectionContent,
    isSectionContentLoading,
    sectionActions,
-   wrappingContainerWidth="90%",
+   wrappingContainerWidth = '90%',
    sx,
 }) {
    const sliderItems = () => {

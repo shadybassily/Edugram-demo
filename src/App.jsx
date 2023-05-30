@@ -1,15 +1,18 @@
 import { Provider } from 'react-redux';
+import { ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
 
-import HomePage from './pages/HomePage';
+import theme from './theme';
 import { store } from './services/store/store';
-import { Navbar, Footer } from './components/organisms';
+import AppRoute from './Route';
 
 function App() {
    return (
       <Provider store={store}>
-         <Navbar />
-         <HomePage />
-         <Footer />
+         <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <AppRoute />
+         </ThemeProvider>
       </Provider>
    );
 }

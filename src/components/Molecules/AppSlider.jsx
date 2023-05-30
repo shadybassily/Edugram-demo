@@ -2,7 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-import { NextArrow, PrevArrow } from '../atoms';
+import { NextArrow, PrevArrow } from '../Atoms';
 import { Box } from '@mui/material';
 
 const breakPoints = {

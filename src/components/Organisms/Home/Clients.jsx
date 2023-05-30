@@ -5,8 +5,8 @@ import ibm from '../../../assets/clients/ibm.png';
 import google from '../../../assets/clients/Google.png';
 import microsoft from '../../../assets/clients/microsoft.png';
 import intel from '../../../assets/clients/intel.png';
-import Section from '../../molecules/Section';
-import { SectionHeader } from '../../atoms';
+import Section from '../../Molecules/Section';
+import { SectionHeader } from '../../Atoms';
 
 const clientsIcons = [apple, intel, ibm, microsoft, google];
 const clients = clientsIcons.map((client, i) => (
@@ -33,7 +33,5 @@ const sectionContent = (
 );
 
 export default function Clients() {
-   return (
-      <Section title="Our Clients" sectionContent={sectionContent} />
-   );
+   return <Section title="Our Clients" sectionContent={sectionContent} />;
 }

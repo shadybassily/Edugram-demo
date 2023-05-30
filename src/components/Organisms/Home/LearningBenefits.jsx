@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 
 import benefitsImage from '../../../assets/images/benefits.png';
-import Section from '../../molecules/Section';
+import Section from '../../Molecules/Section';
 
 const benefits = [
    'Access 16,000+ expert-led courses.',

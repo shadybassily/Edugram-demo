@@ -1,10 +1,10 @@
-import Section from '../../molecules/Section';
+import Section from '../../Molecules/Section';
 
 export default function MostPopular({ popularCourses }) {
    const handleItemClick = (card) => {
       console.log('fetching data for', card);
    };
-   
+
    return (
       <Section
          title="Most Popular"

@@ -6,7 +6,7 @@ import {
    MostPopular,
    Clients,
    PopularCertificates,
-} from '../components/organisms/home';
+} from '../components/Organisms/Home';
 
 export default function HomeTemplate({
    categories,

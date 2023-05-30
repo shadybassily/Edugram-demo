@@ -1,5 +1,5 @@
 import { Grid, Typography, IconButton, Link, Box } from '@mui/material';
-import WrappingContainer from '../molecules/WrappingContainer';
+import WrappingContainer from '../Molecules/WrappingContainer';
 
 import logo from '../../assets/icons/logo.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';

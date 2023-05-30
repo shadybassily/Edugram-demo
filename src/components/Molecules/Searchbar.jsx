@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
-import { AppButton, AppInput } from '../atoms';
+import { AppButton, AppInput } from '../Atoms';
 
 export default function Searchbar({ sx }) {
    const containerStyle = {
