@@ -1,4 +1,4 @@
-import Section from '../../Molecules/Section';
+import Section from 'components/Molecules/Section';
 
 export default function MostPopular({ popularCourses }) {
    const handleItemClick = (card) => {

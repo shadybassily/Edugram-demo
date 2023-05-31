@@ -1,8 +1,8 @@
-import { Section, MediaCard } from '../../Molecules';
+import { Section, MediaCard } from 'components/Molecules';
 import { Grid } from '@mui/material';
 
-const handleItemClick = (item) => {
-   // do something
+const handleSliderItemClick = (item) => {
+   // do something with item
 };
 
 const action = () => {
@@ -14,14 +14,13 @@ export default function TopCategories({
    selectedCategory,
    setSelectedCategory,
    isFetchingCategories,
-   categoryCourses,
+   categoryCourses = [],
    isCategoryCoursesLoading,
 }) {
    const SectionContent = () => {
-      const sample = categoryCourses?.slice(0, 4) || [];
       return (
          <Grid container justifyContent="space-around" gap={3}>
-            {sample.map((course) => (
+            {categoryCourses.map((course) => (
                <MediaCard
                   key={course.product_id}
                   item={course}
@@ -38,7 +37,7 @@ export default function TopCategories({
          subTitle="Learn the latest skills to reach your professional goals"
          sliderData={{ type: 'text', data: categories }}
          slidesToShow={{ sm: 1, md: 2, lg: 3, xl: 5 }}
-         handleSliderItemClick={handleItemClick}
+         handleSliderItemClick={handleSliderItemClick}
          selected={selectedCategory}
          setSelected={setSelectedCategory}
          isSliderDataLoading={isFetchingCategories}

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { AppButton } from '../Atoms';
+import { AppButton } from 'components/Atoms';
 
 const navListItems = [
    { title: <ShoppingCartOutlinedIcon /> },

@@ -1,7 +1,7 @@
 import { AppBar } from '@mui/material';
 
-import { AppLogo } from '../Atoms';
-import { Searchbar, NavMenu, WrappingContainer } from '../Molecules';
+import { AppLogo, WrappingContainer } from 'components/Atoms';
+import { Searchbar, NavMenu } from 'components/Molecules';
 
 export default function Navbar() {
    const AppBarStyle = {

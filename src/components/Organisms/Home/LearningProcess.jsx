@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material';
 
-import { AppBadge } from '../../Atoms';
-import { learningProcess } from '../../../data';
-import Section from '../../Molecules/Section';
+import { AppBadge } from 'components/Atoms';
+import { Section } from 'components/Molecules';
+import { learningProcess } from 'src/data';
 
 export default function LearningProcess() {
    const sectionContent = (
@@ -24,9 +24,9 @@ export default function LearningProcess() {
       <Section
          title="Learning Process"
          subTitle="Learn the latest skills to reach your professional goals"
-         sx={{ backgroundColor: '#F3F3F3', pt: 10 }}
          sectionContent={sectionContent}
          wrappingContainerWidth="100%"
+         sx={{ backgroundColor: '#F3F3F3', pt: 10 }}
       />
    );
 }

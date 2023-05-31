@@ -11,7 +11,7 @@ export const categoryApi = createApi({
 
       fetchCourses: builder.query({
          query: (subjectId) =>
-            `/courses_filtering?page[number]=1&page[size]=10&filter[subject_id]=${subjectId}`,
+            `/courses_filtering?page[number]=1&page[size]=4&filter[subject_id]=${subjectId}`,
             transformResponse: (response) => response.data.courses,
       }),
    }),

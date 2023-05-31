@@ -1,8 +1,7 @@
 import { Grid } from '@mui/material';
 
-import Section from '../../Molecules/Section';
-import { certificates, certificatesCards } from '../../../data';
-import CertificateCard from '../../Molecules/CertificateCard';
+import { CertificateCard, Section } from 'components/Molecules';
+import { certificates, certificatesCards } from 'src/data';
 
 export default function PopularCertificates({ selectedCertificate, setSelectedCertificate }) {
    const handleItemClick = (item) => {

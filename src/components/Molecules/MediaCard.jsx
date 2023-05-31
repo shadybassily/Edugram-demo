@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { MediaCardButton, Price, Rate, BookMark } from '../Atoms/card';
+import { MediaCardButton, Price, Rate, BookMark } from 'components/Atoms/card';
 
 export default function MediaCard({ item, onClick, sx }) {
    const {

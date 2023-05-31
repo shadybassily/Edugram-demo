@@ -1,13 +1,11 @@
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import { Box, Grid, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import hero from '../../../assets/images/hero.png';
+import hero from 'src/assets/images/hero.png';
 
 export default function HomeHeader() {
-   const theme = useTheme();
-   const { primary, secondary } = theme.palette;
+   const { palette } = useTheme();
+   const { primary, secondary } = palette;
 
    return (
       <Grid container direction="row-reverse" justifyContent="space-between" sx={{ pb: 5 }}>
@@ -32,16 +30,14 @@ export default function HomeHeader() {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '35px',
-                  [theme.breakpoints.down('sm')]: {
-                     textAlign: 'center',
-                  },
+                  textAlign: { xs: 'center', sm: 'start' },
                }}
             >
-               <Typography variant="h2" >
+               <Typography variant="h2">
                   <span style={{ color: primary.main }}>Take The Next Step</span>
                   <span style={{ color: secondary.main }}>Toward Your Success</span>
                </Typography>
-              
+
                <Typography variant="body1" color="grey">
                   Join hundreds of learners from the middle-east alreadylearning on E-learning
                   Platform ! We qualify you to be a highly competent programmer through a myriad of

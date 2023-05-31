@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
+
+import HomeTemplate from 'templates/Home.Template';
+import WhatsappIcon from 'components/Atoms/WhatsappIcon';
+import { popularCourses, certificates } from 'src/data';
 import {
    useFetchCategoriesQuery,
    useLazyFetchCoursesQuery,
-} from '../../services/store/api/categoryApi';
-import { certificates } from '../../data';
-import HomeTemplate from '../../template/Home.Template';
-import WhatsappIcon from '../../components/Atoms/WhatsappIcon';
-import { popularCourses } from '../../data';
+} from 'src/services/store/api/categoryApi';
 
 export default function HomePage() {
    const [selectedCategory, setSelectedCategory] = useState(null);

@@ -1,12 +1,12 @@
 import { Grid, Typography, IconButton, Link, Box } from '@mui/material';
-import WrappingContainer from '../Molecules/WrappingContainer';
-
-import logo from '../../assets/icons/logo.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
+import {WrappingContainer} from 'components/Atoms';
+import logo from 'src/assets/icons/logo.png';
 
 const platforms = [
    {

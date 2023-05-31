@@ -1,7 +1,6 @@
-import React from 'react';
-// import logo from '../../assets/icons/logo.png';
-import logo from '../../assets/logo.svg';
 import { Typography } from '@mui/material';
+
+import logo from 'src/assets/logo.svg';
 
 export default function AppLogo({ sx }) {
    const logoContainerstyle = {
