@@ -1,6 +1,8 @@
 import { Box } from '@mui/material';
 
-import { AppButton, SectionHeader, SliderText, WrappingContainer } from 'components/Atoms';
+import { AppButton, SectionHeader,  WrappingContainer } from 'components/Atoms';
+import { SliderText } from 'components/Atoms/slider';
+
 import { AppSlider, MediaCard } from 'components/Molecules';
 
 export default function Section({

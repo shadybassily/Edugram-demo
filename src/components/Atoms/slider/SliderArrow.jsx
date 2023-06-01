@@ -2,7 +2,7 @@ import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRound
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import { useTheme } from '@mui/material/styles';
 
-function AppArrow({props,Arrow}) {
+function SliderArrow({ props, Arrow }) {
    const { className, style, onClick } = props;
    const theme = useTheme();
    const { primary } = theme.palette;
@@ -16,11 +16,11 @@ function AppArrow({props,Arrow}) {
 }
 
 function NextArrow(props) {
-   return <AppArrow Arrow={ArrowForwardIosRoundedIcon} props={props} />;
+   return <SliderArrow Arrow={ArrowForwardIosRoundedIcon} props={props} />;
 }
 
 function PrevArrow(props) {
-   return <AppArrow Arrow={ArrowBackIosNewRoundedIcon} props={props} />;
+   return <SliderArrow Arrow={ArrowBackIosNewRoundedIcon} props={props} />;
 }
 
 export { NextArrow, PrevArrow };

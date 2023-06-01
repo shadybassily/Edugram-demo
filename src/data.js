@@ -33,13 +33,13 @@ const popularCourses = [
          image_url: popular1,
       },
 
-      final_ratings_from_reviews: 4.7,
-      reviews_numbers: 1.988,
+      final_rating_from_reviews: 4.7,
+      reviews_number: 1.988,
 
-      price_after_discount: 17.99,
       original_price: 40.99,
+      price_after_discount: 17.99,
+      original_price_currency: 'EGP',
    },
-
    {
       product_id: 2,
       classified_product: {
@@ -51,11 +51,12 @@ const popularCourses = [
          image_url: popular2,
       },
 
-      final_ratings_from_reviews: 4.7,
-      reviews_numbers: 1.988,
+      final_rating_from_reviews: 4.7,
+      reviews_number: 1.988,
 
       price_after_discount: 17.99,
       original_price: 40.99,
+      original_price_currency: 'EGP',
    },
    {
       product_id: 3,
@@ -67,11 +68,12 @@ const popularCourses = [
 
          image_url: popular3,
       },
-      final_ratings_from_reviews: 4.7,
-      reviews_numbers: 1.988,
+      final_rating_from_reviews: 4.7,
+      reviews_number: 1.988,
 
       price_after_discount: 17.99,
       original_price: 40.99,
+      original_price_currency: 'EGP',
    },
    {
       product_id: 4,
@@ -84,13 +86,13 @@ const popularCourses = [
          image_url: popular1,
       },
 
-      final_ratings_from_reviews: 4.7,
-      reviews_numbers: 1.988,
+      final_rating_from_reviews: 4.7,
+      reviews_number: 1.988,
 
-      price_after_discount: 17.99,
       original_price: 40.99,
+      price_after_discount: 17.99,
+      original_price_currency: 'EGP',
    },
-
    {
       product_id: 5,
       classified_product: {
@@ -98,14 +100,16 @@ const popularCourses = [
          description:
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, Lorem ipsum dolor sit amet, consetetur sadipscing elitr',
          instructors: ['Melvin Owens', 'Roberts Andrei', 'Jose Portila'],
+
          image_url: popular2,
       },
 
-      final_ratings_from_reviews: 4.7,
-      reviews_numbers: 1.988,
+      final_rating_from_reviews: 4.7,
+      reviews_number: 1.988,
 
       price_after_discount: 17.99,
       original_price: 40.99,
+      original_price_currency: 'EGP',
    },
    {
       product_id: 6,
@@ -117,11 +121,12 @@ const popularCourses = [
 
          image_url: popular3,
       },
-      final_ratings_from_reviews: 4.7,
-      reviews_numbers: 1.988,
+      final_rating_from_reviews: 4.7,
+      reviews_number: 1.988,
 
       price_after_discount: 17.99,
       original_price: 40.99,
+      original_price_currency: 'EGP',
    },
 ];
 
