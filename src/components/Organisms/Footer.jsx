@@ -84,6 +84,7 @@ const footerSections = [
       ],
    },
 ];
+
 export default function Footer() {
    return (
       <Box>
@@ -91,10 +92,10 @@ export default function Footer() {
             <Grid container justifyContent="space-between" sx={{ py: 5 }}>
                <Grid
                   item
-                  lg={3}
-                  md={4}
-                  sm={8}
                   xs={12}
+                  sm={8}
+                  md={4}
+                  lg={3}
                   sx={{ display: 'flex', flexDirection: 'column', gap: 5 }}
                >
                   <img src={logo} width="85%" />

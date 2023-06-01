@@ -11,18 +11,9 @@ export default function Navbar() {
       position: 'relative',
    };
 
-   const containerStyle = {
-      display: 'flex',
-      justifyContent: 'space-between',
-      flexWrap: 'wrap',
-      gap: 2,
-      flexDirection: { xs: 'column', sm: 'row' },
-      alignItems: { xs: 'center' },
-   };
-
    return (
       <AppBar sx={AppBarStyle}>
-         <WrappingContainer sx={containerStyle}>
+         <WrappingContainer >
             <AppLogo sx={{ flexGrow: 1 }} />
             <Searchbar sx={{ flexGrow: 2 }} />
             <NavMenu sx={{ flexGrow: 1 }} />

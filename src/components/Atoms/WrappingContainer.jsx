@@ -7,10 +7,14 @@ export default function WrappingContainer({ children, sx }) {
          sx={{
             width: '90%',
             margin: '0 auto',
+            
             display: 'flex',
-            flexDirection: 'row',
             flexWrap: 'wrap',
             justifyContent: 'space-between',
+            gap: 2,
+            flexDirection: { xs: 'column', sm: 'row' },
+            alignItems: { xs: 'center' },
+
             ...sx,
          }}
       >

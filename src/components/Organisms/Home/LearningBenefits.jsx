@@ -1,5 +1,4 @@
 import { Grid, Typography, Box } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 
 import benefitsImage from 'src/assets/images/benefits.png';
@@ -14,9 +13,7 @@ const benefits = [
 ];
 
 export default function LearningBenefits() {
-   const { palette } = useTheme();
-   const { primary, secondary } = palette;
-   
+
    const sectionContent = (
       <Grid
          container
@@ -31,8 +28,12 @@ export default function LearningBenefits() {
             <Grid container gap={5}>
                <Grid item lg={9} md={12}>
                   <Typography variant="h4">
-                     <span style={{ color: secondary.main }}>Benefits Of Learning From </span>
-                     <span style={{ color: primary.main }}>Edugram</span>
+                     <Box component="span" color="primary.main">
+                        Benefits Of Learning From
+                     </Box>
+                     <Box component="span" color="secondary.main" ml={1}>
+                        Edugram
+                     </Box>
                   </Typography>
                </Grid>
                <Grid item>

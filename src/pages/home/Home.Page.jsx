@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import HomeTemplate from 'templates/Home.Template';
+import HomeTemplate from 'templates/home/Home.Template';
 import WhatsappIcon from 'components/Atoms/WhatsappIcon';
 import { popularCourses, certificates } from 'src/data';
 import {

@@ -5,7 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { MediaCardButton, Price, Rate, BookMark } from 'components/Atoms/card';
+import { Price, Rate, BookMark } from 'components/Atoms/card';
+import { AppButton } from 'components/Atoms';
 
 export default function MediaCard({ item, onClick, sx }) {
    const {
@@ -28,6 +29,15 @@ export default function MediaCard({ item, onClick, sx }) {
       ...sx,
    };
 
+   const CardButton = ({ children, sx }) => {
+      const style = {
+         fontSize: '14px',
+         border: '2px solid',
+         borderRadius: '8px',
+         ...sx,
+      };
+      return <AppButton sx={style}>{children}</AppButton>;
+   };
    return (
       <Card sx={cardStyle} onClick={onClick}>
          <BookMark sx={{ position: 'absolute', right: '15px', top: '15px' }} item={item} />
@@ -67,10 +77,10 @@ export default function MediaCard({ item, onClick, sx }) {
          </CardContent>
 
          <CardActions sx={{ marginTop: 'auto', display: 'flex', gap: '10px', pb: 3 }}>
-            <MediaCardButton sx={{ width: '100%' }}>Enroll Now</MediaCardButton>
-            <MediaCardButton>
+            <CardButton sx={{ width: '100%' }}>Enroll Now</CardButton>
+            <CardButton>
                <ShoppingCartOutlinedIcon />
-            </MediaCardButton>
+            </CardButton>
          </CardActions>
       </Card>
    );

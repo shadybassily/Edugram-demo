@@ -1,11 +1,8 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 
 import hero from 'src/assets/images/hero.png';
 
 export default function HomeHeader() {
-   const { palette } = useTheme();
-   const { primary, secondary } = palette;
 
    return (
       <Grid container direction="row-reverse" justifyContent="space-between" sx={{ pb: 5 }}>
@@ -34,8 +31,12 @@ export default function HomeHeader() {
                }}
             >
                <Typography variant="h2">
-                  <span style={{ color: primary.main }}>Take The Next Step</span>
-                  <span style={{ color: secondary.main }}>Toward Your Success</span>
+                  <Box component="span" color="primary.main">
+                     Take The Next Step
+                  </Box>
+                  <Box component="span" color="secondary.main" ml={1}>
+                     Toward Your Success
+                  </Box>
                </Typography>
 
                <Typography variant="body1" color="grey">
