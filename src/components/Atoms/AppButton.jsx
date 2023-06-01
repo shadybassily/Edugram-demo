@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 
 export default function AppButton({ children, sx, ...otherProps }) {
 
-   const btnStyle = {
+   const customBtnStyle = {
       fontSize: 18,
       textTransform: 'none',
       px: 3,
@@ -10,7 +10,7 @@ export default function AppButton({ children, sx, ...otherProps }) {
    };
 
    return (
-      <Button disableElevation sx={btnStyle} {...otherProps}>
+      <Button disableElevation sx={customBtnStyle} {...otherProps}>
          {children}
       </Button>
    );
